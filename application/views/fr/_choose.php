@@ -27,7 +27,7 @@
                 <tbody>
                 	<?php $id = 1; foreach($result as $row) { ?>
                 	<tr>
-                        <td><img src="cdn/images/<?= $row['produk'] ?>.png" width="135" /></td>
+                        <td><img src="cdn/images/<?= $row['produk'] ?>.jpg" width="135" /></td>
                         <td><strong><?= str_replace('_', ' ', $row['produk']) ?></strong><br />
 							<p><?= $row['explain'] ?></p>
                             <button type="button" onclick="show_details(<?= $id ?>)" class="show-details btn btn-xs red">Details <i class="fa fa-caret-right"></i></button>
@@ -37,6 +37,9 @@
                     <?php  $id++; }?>
                 </tbody>
             </table>
+            <div>
+                <a href="https://forms.gle/CrCvdzoPLsfMcFVX9" target="_blank">Silahkan isi form ini terlebih dahulu click here</a>
+            </div>
             </form>
     	</div>
     </div>

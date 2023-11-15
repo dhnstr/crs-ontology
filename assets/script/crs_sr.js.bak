@@ -1,6 +1,6 @@
 // JavaScript Document
 /*$(document).ready(function() {
-	$("#mask_currency").inputmask('999.999.999', {
+	$("#mask_currency").inputmask('99.999.999', {
 		numericInput: true
 	});				   
 });*/

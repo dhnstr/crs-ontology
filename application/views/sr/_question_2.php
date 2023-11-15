@@ -29,7 +29,7 @@
                         <div class="checkbox-list">
                         	<?php foreach($brand as $b) { ?>
                             <label class="checkbox-inline col-md-3" style="margin-left:0px; padding-left:0px">
-                            <input type="checkbox" name="inp2[brand][]" id="" value="<?= $b ?>" <?= array_key_exists('brand', $_POST['inp2']) && in_array($b, $_POST['inp2']['brand']) ? 'checked="checked"' : '' ?>> <img src="cdn/icons/<?= $b ?>.jpg" height="25" alt="<?= str_replace('_', ' ', $b) ?>">
+                            <input type="checkbox" name="inp2[brand][]" id="" value="<?= $b ?>" <?= array_key_exists('brand', $_POST['inp2']) && in_array($b, $_POST['inp2']['brand']) ? 'checked="checked"' : '' ?>> <img src="cdn/icons/<?= $b ?>.png" height="75" alt="<?= str_replace('_', ' ', $b) ?>">
                             </label>
                             <?php } ?>
                             <span class="help-block">Jangan dicentang jika ingin memilih semua merk</span>
@@ -55,10 +55,10 @@
                         <div class="checkbox-list">
                         	<?php foreach($type as $id => $name) { ?>
                             <label class="checkbox-inline col-md-6" style="margin-left:0px; padding-left:0px">
-                            <input type="checkbox" name="inp2[type][]" id="" value="<?= $id ?>" <?= array_key_exists('type', $_POST['inp2']) && in_array($id, $_POST['inp2']['type']) ? 'checked="checked"' : '' ?>> <img src="cdn/icons/<?= $id ?>.jpg" height="25"> &nbsp; <?= $name ?>
+                            <input type="checkbox" name="inp2[type][]" id="" value="<?= $id ?>" <?= array_key_exists('type', $_POST['inp2']) && in_array($id, $_POST['inp2']['type']) ? 'checked="checked"' : '' ?>> <img src="cdn/icons/<?= $id ?>.png" height="40"> &nbsp; <?= $name ?>
                             </label>
                             <?php } ?>
-                            <span class="help-block">Jangan dicentang jika ingin memilih semua jenis handphone</span>
+                            <span class="help-block">Jangan dicentang jika ingin memilih semua jenis sepeda</span>
                         </div>
                     </div>
                 </div>

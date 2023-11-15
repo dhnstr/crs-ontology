@@ -1,31 +1,26 @@
-<div class="col-md-12" style="background:url(assets/global/img/background.jpg); opacity:0.7; height:500px;">
+<div class="col-md-12" style="background:url(https://th.bing.com/th/id/OIG.owYb8_VzfeIKf5Alot35?pid=ImgGn); opacity:0.7; height:00px;">
     <div class="note note-bordered note-danger" style="text-align:center">
-        <h4>Ini adalah aplikasi yang akan membantu anda mendapatkan handphone berdasarkan kebutuhan anda. Kami sajikan dua macam cara pencarian produk yang anda inginkan. Yang pertama, pencarian handphone dengan conversational recommender system berdasarkan kebutuhan fungsional yang anda inginkan, serta pencarian produk berdasarkan spesifikasi teknis yang anda inginkan</h4>
-        <h4>Silahkan pilih salah satu jenis dialog pertanyaan berikut ini</h4>
+        <h4>Ini adalah sebuah aplikasi inovatif yang akan membantu Anda menemukan kamera yang sempurna sesuai dengan preferensi Anda. Kami menggunakan sistem rekomendasi percakapan yang unik berdasarkan kebutuhan fungsional yang Anda miliki, memastikan Anda mendapatkan kamera yang sesuai dengan preferensi dan keinginan Anda.</h4>
         <br>
         <div class="tiles">
         	<div class="tile double" style="cursor:default">
             </div>
-        	<div class="tile double  bg-red"><a href="javascript:u1()">
-                <div class="tile-body">
-                    <i class="fa fa-calendar"></i>
-                </div>
-                <div class="tile-object">
-                    <div class="name">
-                         Kebutuhan Fungsinal
+            <div class="tile" style="cursor:default">
+            </div>
+        	<div class="tile double" style="width: 200px; height: 200px;">
+                <a href="javascript:u1()">
+                    <div class="tile-body" style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                        <img src="https://th.bing.com/th/id/OIG.owYb8_VzfeIKf5Alot35?pid=ImgGn" alt="Image" style="width: 100%; height: 100%; object-fit: contain;">
                     </div>
-                </div>
-            </a></div>
-        	<div class="tile double  bg-red"><a href="javascript:qsr()">
-                <div class="tile-body">
-                    <i class="fa fa-calendar"></i>
-                </div>
-                <div class="tile-object">
-                    <div class="name">
-                         Spesifikasi Teknis
+                </a>
+            </div>
+            <div class="tile-object" style="background-color: #3d85c6;width: 100%; height: 30%; display: flex; justify-content: center; align-items: center;">
+                <a href="javascript:u1()">
+                    <div class="name" style="color:white; padding: 10px; text-align: center; max-width: 200px;">
+                        Click Untuk Melakukan Rekomendasi
                     </div>
-                </div>
-            </a></div>            
+                </a>
+            </div>
         </div>      
     </div>
 </div>

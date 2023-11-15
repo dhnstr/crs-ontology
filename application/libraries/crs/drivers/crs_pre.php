@@ -11,7 +11,6 @@ class CRS_PRE extends CI_Driver
 	
 	function Recommend($usermodel, $pref)
 	{
-		print_r($pref);
 		$product = $this->ontology->get_product();
 		$leaf	 = $this->_get_leaf($usermodel);
 		$fs		 = $this->_get_status($leaf, 'fs');
@@ -92,19 +91,26 @@ class CRS_PRE extends CI_Driver
 			$price	= $this->ontology->has_price($prod['produk']);
 			$detail	= $this->ontology->has_detail($prod['produk']);
 			$type	= $this->_get_type($prod['produk'], $prod_type);
+			$txt = 'Produk '.str_replace('_', ' ', $prod['produk']).' adalah kamera bertipe '.$type.' dengan harga '.$this->_num2idr(isset($price[0]) ? $price[0] : 0).' . Yang mendukung kebutuhan seperti : <ul>';
 			
-			$txt = 'Produk '.str_replace('_', ' ', $prod['produk']).' adalah '.$type.' dengan harga '.$this->_num2idr(isset($price[0]) ? $price[0] : 0).' dan OS adalah '.(isset($os[0]) ? $os[0] : '-').'. Yang mendukung kebutuhan : <ul>';
+			foreach ($fr as $fname => $f) {
+				if ($f['class']) {
+					// Check if 'suppfh' key exists in the $prod array
+					if (isset($prod['suppfh']) && is_array($prod['suppfh'])) {
+						$child = array_intersect($f['child'], $prod['suppfh']);
 			
-			foreach($fr as $fname => $f)
-			{
-				if($f['class'])
-				{
-					$child = array_intersect($f['child'], $prod['suppfh']);
-					
-					if(!empty($child))
-						$txt .= '<li>'.str_replace('_', ' ', $fname).' antara lain untuk : '.str_replace('_', ' ', implode(', ', $child)).'</li>';
+						if (!empty($child)) {
+							$txt .= '<li>' . str_replace('_', ' ', implode(', ', $child)) . '</li>';
+						}
+					} else {
+						// Handle the case when 'suppfh' is not defined or not an array
+						// You can choose to skip this iteration or handle it differently.
+						// Here, we'll skip it and continue with the next iteration.
+						continue;
+					}
 				}
 			}
+		
 			
 			foreach($fr as $fname => $f)
 			{
@@ -128,7 +134,7 @@ class CRS_PRE extends CI_Driver
 					$child = array_intersect($f['child'], $prod['suppfs']);
 					
 					if(!empty($child))
-						$txt .= '<li>'.str_replace('_', ' ', $fname).' antara lain untuk : '.str_replace('_', ' ', implode(', ', $child)).'</li>';
+						$txt .= '<li>'.str_replace('_', ' ', implode(', ', $child)).'</li>';
 				}
 			}
 			
@@ -194,7 +200,7 @@ class CRS_PRE extends CI_Driver
 				$return[$id]['os']		= $os		= $this->ontology->has_os($prod);
 				$return[$id]['price']	= $price	= $this->ontology->has_price($prod);
 				$return[$id]['type']	= $type 	= $this->_get_type($prod, $prod_type);				
-				/*$return[$id]['explain'] = 'Produk '.str_replace('_', ' ', $prod).' adalah '.$type.' dengan harga '.$this->_num2idr(isset($price[0]) ? $price[0] : 0).' dan OS adalah '.(isset($os[0]) ? $os[0] : '-').'.';*/
+				/*$return[$id]['explain'] = 'Produk '.str_replace('_', ' ', $prod).' adalah '.$type.' dengan harga '.$this->_num2idr(isset($price[0]) ? $price[0] : 0).' .';*/
 				$return[$id]['explain'] = 'Harga '.$this->_num2idr(isset($price[0]) ? $price[0] : 0);
 				
 				$id++;
@@ -217,10 +223,11 @@ class CRS_PRE extends CI_Driver
 				{
 					$return[$id]['produk'] 	= $prod;
 					$return[$id]['detail']	= $this->ontology->has_detail($prod);
+					// $return[$id]['fork']	= $this->ontology->has_fork($prod);
 					$return[$id]['os']		= $os		= $this->ontology->has_os($prod);
 					$return[$id]['price']	= $price	= $this->ontology->has_price($prod);
 					$return[$id]['type']	= $type 	= $this->_get_type($prod, $prod_type);				
-					/*$return[$id]['explain'] = 'Produk '.str_replace('_', ' ', $prod).' adalah '.$type.' dengan harga '.$this->_num2idr(isset($price[0]) ? $price[0] : 0).' dan OS adalah '.(isset($os[0]) ? $os[0] : '-').'.';*/
+					/*$return[$id]['explain'] = 'Produk '.str_replace('_', ' ', $prod).' adalah '.$type.' dengan harga '.$this->_num2idr(isset($price[0]) ? $price[0] : 0).' .';*/
 					$return[$id]['explain'] = 'Harga '.$this->_num2idr(isset($price[0]) ? $price[0] : 0);
 					
 					$id++;
@@ -418,6 +425,7 @@ class CRS_PRE extends CI_Driver
 	}
 	
 	function _num2idr($number){
+		$number = floatval($number);
 		return 'Rp. '.number_format($number, 0, ',', '.').',-';
 	}
 }

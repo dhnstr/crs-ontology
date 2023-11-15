@@ -33,48 +33,41 @@ class Common_Model extends CI_Model {
 
 	function brand()
 	{
-		$array['SeaLife'] 		= 'SeaLife';
-		$array['YI']			= 'YI';
-		$array['Panasonic'] 	= 'Panasonic';
-		$array['Ricoh'] 		= 'Ricoh';
-		$array['Sony'] 			= 'Sony';
-		$array['Zeiss'] 		= 'Zeiss';
-		$array['Nikon'] 		= 'Nikon';
-		$array['Canon'] 		= 'Canon';
 		$array['Leica'] 		= 'Leica';
-		$array['Fujifilm']		= 'Fujifilm';
-		$array['DJI']			= 'DJI';
+		$array['DJI'] 			= 'DJI';
+		$array['Nikon'] 		= 'Nikon';
+		$array['OmSystem'] 		= 'OmSystem';
+		$array['Panasonic'] 	= 'Panasonic';
+		$array['Fujifilm'] 		= 'Fujifilm';
 		$array['GoPro'] 		= 'GoPro';
-		$array['Sigma'] 		= 'Sigma';
+		$array['Sony'] 			= 'Sony';
+		$array['Canon'] 		= 'Canon';
 		$array['Pentax'] 		= 'Pentax';
-		$array['Olympus']		= 'Olympus';
-		$array['Rylo']			= 'Rylo';
-		$array['Xiaomi']		= 'Xiaomi';
-		$array['Hasselblad']	= 'Hasselblad';
-		$array['OM']			= 'OM';
-		
-		return $array;
-	}
-	
-	function os()
-	{
-		$array['Android'] 		= 'Android';
-		$array['iOS'] 			= 'iOS';
-		$array['BlackberryOS'] 	= 'Blackberry OS';
-		$array['Blackberry10'] 	= 'Blackberry 10';
-		$array['Windows_Phone']	= 'Windows Phone';
+		$array['Hasselblad'] 	= 'Hasselblad';
+		$array['Ricoh'] 		= 'Ricoh';
+		$array['Sigma'] 		= 'Sigma';
+		$array['Olympus'] 		= 'Olympus';
+		$array['Zeiss'] 		= 'Zeiss';
+		$array['Rylo'] 			= 'Rylo';
+		$array['Xiaomi'] 		= 'Xiaomi';
 		
 		return $array;
 	}
 	
 	function type()
 	{
-		$array['Mirrorless'] = 'Mirrorless';
-		$array['DSLR']  = 'DSLR';
-		$array['Compact']  = 'Compact';
-		$array['VR_or_Action']  = 'VR_or_Action';
-		$array['Drone']  = 'Drone';
-		
+		$array['Action'] = 'Action';	
+		$array['AdvancedCompact'] = 'Advanced Compact';
+		$array['Compact'] = 'Compact';
+		$array['DSLR'] = 'DSLR';	
+		$array['Bridge'] = 'Bridge';	
+		$array['MediumFormat'] = 'Medium Format';	
+		$array['Mirrorless'] = 'Mirrorless';	
+		$array['MirrorlessMediumFormat'] = 'Mirrorless Medium Format';	
+		$array['CompactSystem'] = 'Compact System';
+		$array['DigitalCinema'] = 'Digital Cinema';	
+		$array['PointandShoot'] = 'Point and Shoot';	
+
 		return $array;
 	}
 	

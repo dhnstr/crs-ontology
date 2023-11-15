@@ -59,7 +59,7 @@
                         <div class="checkbox-list">
                         	<?php foreach($brand as $idb => $b) { ?>
                             <label class="checkbox-inline col-md-3" style="margin-left:0px; padding-left:0px">
-                            <input type="checkbox" name="inp[brand][]" id="" value="<?= $b ?>" <?= in_array($b, $result['pref']['brand']) ? 'checked="checked"' : '' ?>> <img src="cdn/icons/<?= $idb ?>.jpg" height="25" alt="<?= $b ?>">
+                            <input type="checkbox" name="inp[brand][]" id="" value="<?= $b ?>" <?= in_array($b, $result['pref']['brand']) ? 'checked="checked"' : '' ?>> <img src="cdn/icons/<?= $idb ?>.png" height="75" alt="<?= $b ?>">
                             </label>
                             <?php } ?>
                             <span class="help-block">Jangan dicentang jika ingin memilih semua merk</span>
@@ -109,10 +109,10 @@
                         <div class="checkbox-list">
                         	<?php foreach($type as $id => $name) { ?>
                             <label class="checkbox-inline col-md-6" style="margin-left:0px; padding-left:0px">
-                            <input type="checkbox" name="inp[type][]" id="" value="<?= $id ?>" <?= in_array($id, $result['pref']['type']) ? 'checked="checked"' : '' ?>> <img src="cdn/icons/<?= $id ?>.jpg" height="25" alt="<?= $name ?>">
+                            <input type="checkbox" name="inp[type][]" id="" value="<?= $id ?>" <?= in_array($id, $result['pref']['type']) ? 'checked="checked"' : '' ?>> <img src="cdn/icons/<?= $id ?>.png" height="40" alt="<?= $name ?>"><?= $name ?>
                             </label>
                             <?php } ?>
-                            <span class="help-block">Jangan dicentang jika ingin memilih semua jenis handphone</span>
+                            <span class="help-block">Jangan dicentang jika ingin memilih semua jenis sepeda</span>
                             <!--< ?php foreach($$result['pref']['type'] as $t) { ?>
                             <label class="checkbox-inline">
                             <input type="checkbox" name="inp[type][]" id="" value="< ?= $t ?>" checked="checked"> < ?= $t ?>
@@ -125,7 +125,7 @@
                 
                 <?php if(isset($result['contra_usermodel']) && !empty($result['contra_usermodel'])) { foreach($result['contra_usermodel'] as $f) { ?>                    
                 <div class="form-group">
-                    <label for="inputEmail1" class="col-md-3 control-label"><img src="cdn/icons/<?= $f ?>.jpg" width="25" height="25" title=""> &nbsp; <?= str_replace('_', ' ', $f) ?></label>
+                    <label for="inputEmail1" class="col-md-3 control-label"><img src="cdn/icons/<?= $f ?>.png" width="60" height="40" title=""> &nbsp; <?= str_replace('_', ' ', $f) ?></label>
                     <div class="col-md-9">
                         <div class="radio-list">
                         	<label class="radio-inline">

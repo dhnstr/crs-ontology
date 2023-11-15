@@ -69,7 +69,7 @@ Model : B
                             <input type="checkbox" name="inp2[type][]" id="" value="<?= $id ?>"> <img src="cdn/icons/<?= $id ?>.jpg" height="25"> &nbsp; <?= $name ?>
                             </label>
                             <?php } ?>
-                            <span class="help-block">Jangan dicentang jika ingin memilih semua jenis handphone</span>
+                            <span class="help-block">Jangan dicentang jika ingin memilih semua jenis sepeda</span>
                         </div>
                     </div>
                 </div>

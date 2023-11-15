@@ -131,7 +131,7 @@ class SR extends CI_Controller
 		if(!empty($inp2['price']['start']) && empty($inp2['price']['end']))
 		{
 			$inp2['price']['start'] = (int) str_replace(array('.', '_'), '', $inp2['price']['start']);
-			$inp2['price']['end'] 	= 30000000;
+			$inp2['price']['end'] 	= (int) str_replace(array('.', '_'), '', $inp2['price']['end']);
 		}
 		else if(empty($inp2['price']['start']) && !empty($inp2['price']['end']))
 		{

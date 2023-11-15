@@ -17,7 +17,7 @@
                 <?php foreach($fr as $f) { ?>                    
                 <div class="form-group">
 				    <?php $this->load->driver('crs'); $com = $this->crs->ontology->get_fr_comment($f); if(isset($com[0])) $c = $com[0]; else $c = ''; ?>
-                    <label for="inputEmail1" class="col-md-3 control-label"><img src="cdn/icons/<?= $f ?>.jpg" width="25" height="25" title=""> &nbsp; <?= str_replace('_', ' ', $f) ?></label>
+                    <label for="inputEmail1" class="col-md-3 control-label"><img src="cdn/icons/<?= $f ?>.png" width="60" height="40" title=""> &nbsp; <?= str_replace('_', ' ', $f) ?></label>
                     <div class="col-md-9">
                         <div class="radio-list">
                         	<label class="radio-inline">

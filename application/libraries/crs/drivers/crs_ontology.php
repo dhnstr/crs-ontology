@@ -106,13 +106,7 @@ class CRS_Ontology extends CI_Driver
 		
 		return $this->execute($sparql, 1);
 	}
-	
-	function has_os($var)
-	{
-		$sparql = 'SELECT ?price WHERE { data:'.$var.' data:hasOS ?price }';
-		
-		return $this->execute($sparql, 1);
-	}
+
 	
 	function has_brand($var)
 	{
@@ -121,6 +115,13 @@ class CRS_Ontology extends CI_Driver
 		return $this->execute($sparql, 1);
 	}
 	
+	function has_os($var)
+	{
+		$sparql = 'SELECT ?price WHERE { data:'.$var.' data:hasOS ?price }';
+		
+		return $this->execute($sparql, 1);
+	}
+
 	function has_detail($var)
 	{
 		$sparql = 'SELECT ?detail WHERE { data:'.$var.' data:hasDetails ?detail }';

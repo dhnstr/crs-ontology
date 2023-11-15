@@ -29,9 +29,9 @@
                 <tbody>
                 	<?php $id = 1; foreach($result as $row) { ?>
                 	<tr>
-                        <td><img src="cdn/images/<?= $row['produk'] ?>.png" width="135" /></td>
+                        <td><img src="cdn/images/<?= $row['produk'] ?>.jpg" width="135" /></td>
                         <td><strong><?= str_replace('_', ' ', $row['produk']) ?></strong><br />
-							<p><?= $row['explain'] ?><br>Utility : <?= $row['utility'] ?></p>
+							<p><?= $row['explain'] ?></p>
                             <button type="button" onclick="show_details(<?= $id ?>)" class="show-details btn btn-xs red">Details <i class="fa fa-caret-right"></i></button>
                             <p id="txt-<?= $id ?>" class="details-less"><?= implode('<br>', $row['details']) ?></p></td>
                         <td><input type="checkbox" class="pilprod" name="product[]" value="<?= $row['produk'] ?>" /></td>

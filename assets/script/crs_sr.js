@@ -1,9 +1,11 @@
 // JavaScript Document
-/*$(document).ready(function() {
-	$("#mask_currency").inputmask('999.999.999', {
-		numericInput: true
-	});				   
-});*/
+// $(document).ready(function () {
+//     $('.mask_currency').inputmask('999,999,999', {
+//         numericInput: true,
+//         placeholder: " ",
+//         showMaskOnHover: false
+//     });
+// });
 
 var table;
 
@@ -49,7 +51,7 @@ function qsr()
 			$(".mask_currency").inputmask('99.999.999', {
 				numericInput: true
 			});	
-		},
+		},	
 		error: function(xhr, status, error) {
 			console.log(xhr.responseText);
 		},

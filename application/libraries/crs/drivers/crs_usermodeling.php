@@ -50,6 +50,9 @@ class CRS_Usermodeling extends CI_Driver
 			
 			//cari type
 			$elmproduct[$prod]['tipe'] =  $this->ontology->lower_individu($prod);
+
+			//cari price
+			$elmproduct[$prod]['price'] = $this->ontology->has_price($prod);
 		}
 		
 		//cari perbedaan func dan spec
@@ -75,6 +78,7 @@ class CRS_Usermodeling extends CI_Driver
 			$elmproduct[$nprod1]['def'] = $def;
 			$elmproduct[$nprod1]['dec'] = $prod1['spec'];
 			$elmproduct[$nprod1]['det'] = $prod1['tipe'];
+			$elmproduct[$nprod1]['prc'] = $prod1['price'];
 		}
 		
 		return $elmproduct;

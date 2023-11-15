@@ -1,9 +1,11 @@
 // JavaScript Document
-/*$(document).ready(function() {
-	$("#mask_currency").inputmask('999.999.999', {
-		numericInput: true
-	});				   
-});*/
+// $(document).ready(function () {
+//     $('.mask_currency').inputmask('999,999,999', {
+//         numericInput: true,
+//         placeholder: " ",
+//         showMaskOnHover: false
+//     });
+// });
 
 var table;
 

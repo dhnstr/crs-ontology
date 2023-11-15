@@ -62,7 +62,7 @@ class sparql_connection
 	var $params = null;
 	# capabilities are either true, false or null if not yet tested.
 
-	function __construct( $endpoint )
+	public function __construct( $endpoint )
 	{
 		$this->endpoint = $endpoint;
 		global $sparql_last_connection;
@@ -400,13 +400,13 @@ class xx_xml {
 	var $type;
 
 	// function with the default parameter value
-	function xx_xml($url='http://www.opocot.com', $type='url') {
-		$this->type = $type;
-		$this->url  = $url;
-		$this->parse();
-	}
-  
-	function error() { return $this->error; }
+	function __construct($url='http://www.opocot.com', $type='url') {
+        $this->type = $type;
+        $this->url  = $url;
+        $this->parse();
+    }
+
+    function error() { return $this->error; }
 
 	// parse XML data
 	function parse()

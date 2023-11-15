@@ -18,7 +18,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Pilih Handphone</title>
+<title>Pilih Sepeda</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -67,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!-- BEGIN LOGO -->
 			<div class="page-logo" style="width:400px">
 				<a href="index.html">
-                	<div style="float:left; margin-top:21px"><span style="color:#333333;font-size:26px;">CARI</span> <span style="font-size:26px; color:#ff3f3f;">HANDPHONE</div>
+                	<div style="float:left; margin-top:21px"><span style="color:#333333;font-size:26px;">CARI</span> <span style="font-size:26px; color:#ff3f3f;">Sepeda</div>
                 </a>
 			</div>
 			<!-- END LOGO -->

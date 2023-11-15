@@ -18,7 +18,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Pilih Handphone</title>
+<title>Pilih Sepeda</title>
 <base href="<?= base_url() ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -42,7 +42,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <link href="assets/admin/layout3/css/themes/red-intense.css" rel="stylesheet" type="text/css" id="style_color">
 <link href="assets/admin/layout3/css/custom.css" rel="stylesheet" type="text/css">
 <!-- END THEME STYLES -->
-<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="shortcut icon" href="https://th.bing.com/th/id/OIG.vRnNEB94dmo6kVt0uKVt?pid=ImgGn"/>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -65,13 +65,17 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- BEGIN HEADER TOP -->
 	<div class="page-header-top">
 		<div class="container">
-			<!-- BEGIN LOGO -->
-			<div class="page-logo" style="width:400px">
-				<a href="">
-                	<div style="float:left; margin-top:21px"><span style="color:#333333;font-size:26px;">CARI</span> <span style="font-size:26px; color:#ff3f3f;">HANDPHONE</div>
-                </a>
-			</div>
-			<!-- END LOGO -->
+				<!-- BEGIN LOGO -->
+				<div class="page-logo" style="width: 400px">
+					<a href="">
+						<div style="float: left; display: flex; align-items: center;">
+							<img src="https://th.bing.com/th/id/OIG.vRnNEB94dmo6kVt0uKVt?pid=ImgGn" alt="LENSA PINTAR Logo" style="width: 70px; height: auto;">
+							<span style="color: #333333; font-size: 26px; font-weight: bold;">LENSA</span>
+							<span style="font-size: 26px; color: #3d85c6; font-weight: bold;">PINTAR</span>
+						</div>
+					</a>
+				</div>
+				<!-- END LOGO -->
 			<!-- BEGIN RESPONSIVE MENU TOGGLER -->
 			<a href="javascript:;" class="menu-toggler"></a>
 			<!-- END RESPONSIVE MENU TOGGLER -->
@@ -157,11 +161,11 @@ License: You must have a valid license purchased only from themeforest(the above
             	<?php if ($this->session->userdata('login')) { ?>
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="javascript:u1()"><i class="fa fa-comments"></i> Model A</a>
+						<a href="javascript:u1()"><i class="fa fa-comments"></i> Kebutuhan Fungsional Kamera</a>
 					</li>
-                    <li>
+                    <!-- <li>
 						<a href="javascript:qsr()"><i class="fa fa-comments"></i> Model B</a>
-					</li>                    
+					</li>                     -->
 				</ul>
                 <?php } ?>
 			</div>
@@ -191,8 +195,8 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="row">
 				<div class="col-md-12" id="viewport">
 					<?php $this->load->view($view); ?>
-				</div>
-			</div>
+				</div>		
+			</div>	
 			<!-- END PAGE CONTENT INNER -->
 		</div>
 	</div>

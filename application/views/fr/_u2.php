@@ -76,7 +76,24 @@
                         <td>Tipe</td>
                         <?php foreach($result as $name => $row) { ?>
                             <td><?= !empty($row['det']) ? str_replace('_', ' ', $row['det'][0]) : '' ?></td>
-                        <?php }?>
+                        <?php }?>   
+                    </tr>
+                    <tr>                    
+                        <td>Harga</td>
+                        <?php foreach ($result as $name => $row) { ?>
+                            <td>
+                                <?php
+                                if (!empty($row['prc'])) {
+                                    $price = $row['prc'][0];
+                                    // Format the price using number_format
+                                    $formattedPrice = 'Rp. ' . number_format($price, 0, ',', '.') . ',-';
+                                    echo $formattedPrice;
+                                } else {
+                                    echo ''; // Handle the case when 'prc' is empty
+                                }
+                                ?>
+                            </td>
+                        <?php } ?>
                     </tr>
                     <?php } ?>
                 	<tr>                    

@@ -207,7 +207,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="container">
-		 2015 &copy; PILIH HANDPHONE. By pilihberita.com
+		 2015 &copy; PILIH SEPEDA. By Fadhlan Mochamad Daffa Richtman
 	</div>
 </div>
 <div class="scroll-to-top">

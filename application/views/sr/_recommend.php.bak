@@ -46,7 +46,7 @@ Model : B
                 <tbody>
                 	<?php $id = 1; foreach($result as $row) { ?>
                 	<tr>
-                        <td><img src="cdn/images/<?= $row['produk'] ?>.png" width="100" style="width:100px" /></td>
+                        <td><img src="cdn/images/<?= $row['produk'] ?>.jpg" width="100" style="width:100px" /></td>
                         <td><strong><?= str_replace('_', ' ', $row['produk']) ?></strong><br />
 							<p><?= $row['explain'] ?></p>
                             <button type="button" onclick="show_details(<?= $id ?>)" class="show-details btn btn-xs red">Details <i class="fa fa-caret-right"></i></button>
